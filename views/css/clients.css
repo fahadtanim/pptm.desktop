@@ -1,0 +1,157 @@
+.page-title {
+  font-size: 24px;
+  color: #fff;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.page-header-break {
+  opacity: 0.3;
+}
+
+#total_client_page_count {
+  margin-top: 1.25rem;
+}
+
+#go_to_page {
+  margin: 0px;
+  /* margin-top: -0.75rem; */
+  margin-bottom: 0.75rem;
+}
+
+#client_page_btn {
+  margin-top: 0.75rem;
+}
+/* .input-field,
+.input-field label,
+.input-field input,
+.input-field span {
+  padding-left: 0px !important;
+} */
+
+.search-and-create-field > .custom-input {
+  margin: 0px;
+  margin-left: -0.75rem !important;
+}
+
+.search-and-sort-projects-field {
+  margin-top: 0.75rem;
+  margin-bottom: 0px !important;
+}
+
+.search-and-sort-projects-field > .sort-btn {
+  margin: 0px;
+  margin-top: 1.55rem;
+}
+
+.search-and-create-field > .right-align {
+  margin-top: 0.75rem;
+}
+
+header {
+  background-color: #004d40;
+}
+
+.pagination > li.active {
+  background-color: #004d40 !important;
+}
+
+.btn {
+  background-color: #004d40 !important;
+}
+
+#data-result {
+  color: #004d40;
+  padding-top: 4.55rem;
+}
+
+.row .breadcrumb-wrapper {
+  padding: 0px !important;
+}
+.breadcrumb-wrapper > .breadcrumb,
+.breadcrumb-wrapper > .breadcrumb::before {
+  color: #004d40;
+}
+.breadcrumb-wrapper > .breadcrumb {
+  padding-top: 0.75rem;
+}
+
+.breadcrumb-wrapper > .breadcrumb::before {
+  margin-top: -0.25rem;
+}
+
+.breadcrumb-wrapper > .breadcrumb:last-child {
+  color: #1a237e;
+}
+
+.breadcrumb::before {
+  content: "\E5CC" !important;
+  vertical-align: top;
+  display: inline-block;
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 25px;
+  margin: 0 10px 0 8px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.client-details-wrapper {
+  background-color: #e0e0e0;
+}
+
+.details {
+  color: #004d40;
+}
+
+h3.details {
+  text-transform: uppercase;
+}
+
+h6.details {
+  text-transform: capitalize;
+}
+
+p.details {
+  text-transform: initial;
+  color: #020202;
+}
+
+.no-margin {
+  margin: 0px !important;
+}
+
+#client-project-sort-btn .material-icons {
+  margin-top: -0.25rem;
+}
+
+.client-projects-list:nth-child(odd) {
+  background-color: #f5f5f5;
+}
+.client-projects-list:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.client-projects-list {
+  padding: 0.75rem 1.5rem 0.75rem 1.5rem !important;
+  text-transform: capitalize;
+  color: #004d40;
+  /* border-radius: 5%; */
+}
+
+.production-badge {
+  background-color: #004d40 !important;
+  text-transform: lowercase;
+}
+
+.development-badge {
+  background-color: #dd2c00 !important;
+  text-transform: lowercase;
+}
+
+.upcoming-badge {
+  background-color: #ffab00 !important;
+  text-transform: lowercase;
+}
+
+/*#########  PROJECTS  #################*/

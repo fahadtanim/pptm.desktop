@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./css/clients.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <div class="row no-margin">
+        <div class="container">
+            <div class="row no-margin">
+                <div class="col s12 breadcrumb-wrapper">
+                    <div class=""></div>
+                    <a href="./viewClientsWindow.html" class="breadcrumb">Clients</a>
+                    <a href="" class="breadcrumb" id="client-breadcumb">amac</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row no-margin client-details-wrapper">
+        <div class="container">
+            <h3 class="row details" id="client-cid">
+                AMAC
+            </h3>
+            <h6 class="row details" id="client-name">
+                American Menufacturar Association Co.
+            </h6>
+
+            <p class="row details" id="client-description">
+                American Menufacturar Association Co. Lorem Ipsum aksdh Lorem IpsumAmerican Menufacturar Association Co.
+                Lorem Ipsum aksdh Lorem IpsumAmerican Menufacturar Association Co. Lorem Ipsum aksdh Lorem IpsumAmerican
+                Menufacturar Association Co. Lorem Ipsum aksdh Lorem IpsumAmerican Menufacturar Association Co. Lorem
+                Ipsum aksdh Lorem Ipsum
+            </p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <ul class="tabs">
+                    <li class="tab col s3"><a class="active" href="#test1">Projects</a></li>
+                    <li class="tab col s3"><a href="#test2">Tasks</a></li>
+                </ul>
+            </div>
+            <div id="test1" class="col s12">
+                <div class="row search-and-sort-projects-field">
+                    <div class="custom-input input-field col s6">
+                        <input id="search-client-field" type="text">
+                        <label for="search-client-field">Search</label>
+                    </div>
+                    <div class="col s6 right-align sort-btn">
+                        <button class="waves-effect waves-light btn"><i
+                                class="material-icons right">sort</i>Sort</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <a href="" class="col s4 m3 client-projects-list">amacln4 <span class="new badge production-badge"
+                            data-badge-caption="production"></span></a></a>
+                    <a href="" class="col s4 m3 client-projects-list">amacln3 <span class="new badge development-badge"
+                            data-badge-caption="development"></span></a></a>
+                    <a href="" class="col s4 m3 client-projects-list">amacln2 <span class="new badge upcoming-badge"
+                            data-badge-caption="upcoming"></span></a></a>
+                    <a href="" class="col s4 m3 client-projects-list">amacln1 <span class="new badge production-badge"
+                            data-badge-caption="production"></span></a></a>
+                    <a href="" class="col s4 m3 client-projects-list">amacln1 <span class="new badge production-badge"
+                            data-badge-caption="production"></span></a></a>
+                    <a href="" class="col s4 m3 client-projects-list">amacln1 <span class="new badge production-badge"
+                            data-badge-caption="production"></span></a></a>
+                    <a href="" class="col s4 m3 client-projects-list">amacln1 <span class="new badge production-badge"
+                            data-badge-caption="production"></span></a></a>
+                </div>
+            </div>
+            <div id="test2" class="col s12">Test 2</div>
+        </div>
+    </div>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./js/showClients.js"></script>
+
+    <script>
+        M.AutoInit();
+    </script>
+</body>
+
+</html>

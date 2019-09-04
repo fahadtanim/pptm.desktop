@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./css/clients.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <header class="row">
+        <h4 class="page-title container">PROJECTS</h4>
+        <!-- <hr class="page-header-break col s12" /> -->
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col s12 breadcrumb-wrapper">
+                <div class=""></div>
+                <a href="./viewProjectsWindow.html" class="breadcrumb">Projects</a>
+            </div>
+        </div>
+        <div class="row search-and-create-field">
+            <div class="custom-input input-field col s6">
+                <input id="search-client-field" type="text">
+                <label for="search-client-field">Search</label>
+            </div>
+            <div class="col s6 right-align">
+                <button class="waves-effect waves-light btn">create</button>
+            </div>
+        </div>
+        <div class="row">
+            <div id="test"></div>
+            <table class="highlight centered col s12">
+                <thead>
+                    <tr>
+                        <th>NAME</th>
+                        <th>JEF</th>
+                        <th>PREPROCESSED</th>
+                        <th>CHECKLIST</th>
+                        <th>CHECKIMAGE</th>
+                        <th>TRANSACTION</th>
+                        <th>MESSEAGE MANAGER</th>
+                    </tr>
+                </thead>
+
+                <tbody id='data-input-field'>
+
+                </tbody>
+            </table>
+            <p id="data-result" class="center-align"></p>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col s6" id="total_client_page_count">
+
+            </div>
+            <div class="col s5">
+                <input type="number" id="go_to_page" min="1">
+
+            </div>
+            <button class="waves-effect waves-light btn col s1" id="client_page_btn">GO</button>
+        </div>
+        <!-- <div class="row center-align">
+            <ul class="pagination" id="client_table_paginator">
+                <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                <li class="active"><a href="#!">1</a></li>
+                <li class="waves-effect"><a href="#!">2</a></li>
+                <li class="waves-effect"><a href="#!">3</a></li>
+                <li class="waves-effect"><a href="#!">4</a></li>
+                <li class="waves-effect"><a href="#!">5</a></li>
+                <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+            </ul>
+        </div> -->
+    </div>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./js/projects.js"></script>
+</body>
+
+</html>

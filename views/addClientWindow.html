@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <title>Create New Client</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./css/clients.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <header class="row">
+        <h5 class="page-title container">Create Client</h5>
+        <!-- <hr class="page-header-break col s12" /> -->
+    </header>
+    <div class="row">
+        <form class="container">
+            <div class="row">
+                <div class="input-field col m6 s12">
+                    <input id="cid" type="text" class="validate">
+                    <label for="cid">CID</label>
+                </div>
+                <div class="input-field col m6 s12">
+                    <input id="client_name" type="text" class="validate">
+                    <label for="client_name">Client Name</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea id="client_description" class="materialize-textarea"></textarea>
+                    <label for="client_description">Client Description</label>
+                </div>
+            </div>
+            <div class="row right-align">
+                <button class="btn waves-effect waves-light" type="submit" name="action">Create
+                    <i class="material-icons right">group_add</i>
+                </button>
+            </div>
+        </form>
+    </div>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./js/clients.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "pptm",
+  "version": "1.0.0",
+  "description": "print process task manager",
+  "main": "index.js",
+  "scripts": {
+    "start" : "electron ."
+  },
+  "author": "PrintProcess DSi",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^6.0.3"
+  }
+}
