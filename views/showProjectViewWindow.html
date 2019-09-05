@@ -5,7 +5,7 @@
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./css/clients.css">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/projects.css">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
@@ -37,37 +37,160 @@
         <div class="row">
             <div class="col s12">
                 <ul class="tabs">
-                    <li class="tab col s3"><a class="active" href="#test1">Projects</a></li>
+                    <li class="tab col s3"><a class="active" href="#test1">Specification</a></li>
                     <li class="tab col s3"><a href="#test2">Tasks</a></li>
                 </ul>
             </div>
-            <div id="test1" class="col s12">
-                <div class="row search-and-sort-projects-field">
-                    <div class="custom-input input-field col s6">
-                        <input id="search-client-field" type="text">
-                        <label for="search-client-field">Search</label>
+            <div id="test1" class="col s12 project-specification-wrapper">
+                <h5 class="project-specification-category">Project Identity : </h5>
+                <div class="row">
+                    <div class="col s3">
+                        <h6 class="project-specification-title">CID :</h6>
                     </div>
-                    <div class="col s6 right-align sort-btn">
-                        <button class="waves-effect waves-light btn"><i
-                                class="material-icons right">sort</i>Sort</button>
+                    <div class="col s3">
+                        <h6 class="project-specification-content" id="project-cid"></h6>
+                    </div>
+                    <div class="col s3">
+                        <h6 class="project-specification-title">Status :</h6>
+                    </div>
+                    <div class="col s3">
+                        <h6 class="project-specification-content" id="project-phase"></h6>
                     </div>
                 </div>
                 <div class="row">
-                    <a href="" class="col s4 m3 client-projects-list">amacln4 <span class="new badge production-badge"
-                            data-badge-caption="production"></span></a></a>
-                    <a href="" class="col s4 m3 client-projects-list">amacln3 <span class="new badge development-badge"
-                            data-badge-caption="development"></span></a></a>
-                    <a href="" class="col s4 m3 client-projects-list">amacln2 <span class="new badge upcoming-badge"
-                            data-badge-caption="upcoming"></span></a></a>
-                    <a href="" class="col s4 m3 client-projects-list">amacln1 <span class="new badge production-badge"
-                            data-badge-caption="production"></span></a></a>
-                    <a href="" class="col s4 m3 client-projects-list">amacln1 <span class="new badge production-badge"
-                            data-badge-caption="production"></span></a></a>
-                    <a href="" class="col s4 m3 client-projects-list">amacln1 <span class="new badge production-badge"
-                            data-badge-caption="production"></span></a></a>
-                    <a href="" class="col s4 m3 client-projects-list">amacln1 <span class="new badge production-badge"
-                            data-badge-caption="production"></span></a></a>
+                    <div class="col s3">
+                        <h6 class="project-specification-title">JID :</h6>
+                    </div>
+                    <div class="col s3">
+                        <p class="project-specification-content" id="project-jid"></p>
+                    </div>
+                    <div class="col s3">
+                        <h6 class="project-specification-title">Client Pickup :</h6>
+                    </div>
+                    <div class="col s3">
+                        <p class="project-specification-content" id="project-client-pickup"></p>
+                    </div>
                 </div>
+                <div class="row">
+                    <div class="col s3">
+                        <h6 class="project-specification-title">Redmine Jef :</h6>
+                    </div>
+                    <div class="col s3">
+                        <p class="project-specification-content" id="project-redmine-jef"></p>
+                    </div>
+                    <div class="col s3">
+                        <h6 class="project-specification-title">Live Date :</h6>
+                    </div>
+                    <div class="col s3">
+                        <p class="project-specification-content" id="project-live-date"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s3">
+                        <h6 class="project-specification-title">Description :</h6>
+                    </div>
+                    <div class="col s9">
+                        <p class="project-specification-content" id="project-description"></p>
+                    </div>
+                </div>
+                <!--##########   PROJECT FEATURES  ##########-->
+                <h5 class="project-specification-category">Project Features : </h5>
+                <div class="row">
+                    <div class="col s3">
+                        <h6 class="project-specification-title">Preprocessed :</h6>
+                    </div>
+                    <div class="col s3">
+                        <h6 class="project-specification-content" id="project-preprocessed"></h6>
+                    </div>
+                    <div class="col s3">
+                        <h6 class="project-specification-title">Check List :</h6>
+                    </div>
+                    <div class="col s3">
+                        <h6 class="project-specification-content" id="project-checklist"></h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s3">
+                        <h6 class="project-specification-title">Input Data File Pattern :</h6>
+                    </div>
+                    <div class="col s3">
+                        <p class="project-specification-content" id="project-input-data-file-pattern"></p>
+                    </div>
+                    <div class="col s3">
+                        <h6 class="project-specification-title">Check Image :</h6>
+                    </div>
+                    <div class="col s3">
+                        <p class="project-specification-content" id="project-checkimage"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s3">
+                        <h6 class="project-specification-title">Working Data File Pattern :</h6>
+                    </div>
+                    <div class="col s3">
+                        <p class="project-specification-content" id="project-working-data-file-pattern"></p>
+                    </div>
+                    <div class="col s3">
+                        <h6 class="project-specification-title">Transaction :</h6>
+                    </div>
+                    <div class="col s3">
+                        <p class="project-specification-content" id="project-transaction"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s3">
+                        <h6 class="project-specification-title">Message Manager :</h6>
+                    </div>
+                    <div class="col s3">
+                        <p class="project-specification-content" id="project-message-manager"></p>
+                    </div>
+                    <div class="col s3">
+                        <h6 class="project-specification-title">Message Manager Text :</h6>
+                    </div>
+                    <div class="col s3">
+                        <p class="project-specification-content" id="project-message-manager-text"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s3">
+                        <h6 class="project-specification-title">Message Manager Type :</h6>
+                    </div>
+                    <div class="col s3">
+                        <p class="project-specification-content" id="project-message-manager-type"></p>
+                    </div>
+                    <div class="col s3">
+                        <h6 class="project-specification-title">Message Manager Image :</h6>
+                    </div>
+                    <div class="col s3">
+                        <p class="project-specification-content" id="project-message-manager-image"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s3">
+                        <h6 class="project-specification-title">Message Manager Total :</h6>
+                    </div>
+                    <div class="col s3">
+                        <p class="project-specification-content" id="project-message-manager-total-content"></p>
+                    </div>
+                </div>
+                <!--##########   PROJECT DEADLINES  ##########-->
+                <h5 class="project-specification-category">Project Deadlines : </h5>
+                <div class="row" id="project-specification-deadlines-container">
+
+                </div>
+                <!--##########   PROJECT ENROLLED USERS  ##########-->
+                <h5 class="project-specification-category">Project Enrolled Users : </h5>
+                <div class="row" id="project-specification-enrolled-users-container">
+
+                </div>
+                <!-- <div class="row">
+                    <div class="col s3">
+                        <h6 class="project-specification-title">Description :</h6>
+                    </div>
+                    <div class="col s9">
+                        <p class="project-specification-content" id="project-description"></p>
+                    </div>
+                </div> -->
             </div>
             <div id="test2" class="col s12">Test 2</div>
         </div>
