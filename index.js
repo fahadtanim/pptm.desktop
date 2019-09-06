@@ -3,7 +3,8 @@ const url = require("url");
 const path = require("path");
 // const menuTemplate = require("./menuTemplates");
 const { app, BrowserWindow, Menu } = electron;
-
+const ipcMain = electron.ipcMain;
+const dialog = electron.dialog;
 let mainWindow;
 let viewProjectsWindow;
 let addClientWindow;
@@ -15,7 +16,7 @@ app.on("ready", () => {
   });
   mainWindow.loadURL(
     url.format({
-      pathname: path.join(__dirname, "/views/mainWindow.html"),
+      pathname: path.join(__dirname, "/views/dashboard/mainWindow.html"),
       protocol: "file",
       slashes: true
     })
@@ -34,18 +35,22 @@ app.on("ready", () => {
 function createViewProjectsWindow() {
   mainWindow.loadURL(
     url.format({
-      pathname: path.join(__dirname, "/views/viewProjectsWindow.html"),
+      pathname: path.join(__dirname, "/views/projects/viewProjectsWindow.html"),
       protocol: "file",
       slashes: true
     })
   );
 }
 
+ipcMain.on("openEditProjectWindow", event => {
+  dialog.showErrorBox("error msg", "an error msg");
+});
+
 //ALL CLIENTS WINDOW
 function createViewClientsWindow() {
   mainWindow.loadURL(
     url.format({
-      pathname: path.join(__dirname, "/views/viewClientsWindow.html"),
+      pathname: path.join(__dirname, "/views/clients/viewClientsWindow.html"),
       protocol: "file",
       slashes: true
     })
@@ -59,7 +64,7 @@ function createAddClientWindow() {
   });
   addClientWindow.loadURL(
     url.format({
-      pathname: path.join(__dirname, "/views/addClientWindow.html"),
+      pathname: path.join(__dirname, "/views/clients/addClientWindow.html"),
       protocol: "file",
       slashes: true
     })

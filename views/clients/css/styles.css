@@ -23,11 +23,11 @@
   margin-top: 0.75rem;
 }
 /* .input-field,
-.input-field label,
-.input-field input,
-.input-field span {
-  padding-left: 0px !important;
-} */
+  .input-field label,
+  .input-field input,
+  .input-field span {
+    padding-left: 0px !important;
+  } */
 
 .search-and-create-field > .custom-input {
   margin: 0px;

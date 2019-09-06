@@ -1,4 +1,5 @@
 const electron = require("electron");
+const ipcRenderer = electron.ipcRenderer;
 const api_url = "http://localhost:5000";
 function loadData() {
   let path = window.location.href;
@@ -48,7 +49,15 @@ function loadProjectData(data) {
   getEnrolledUser(data.project_id);
 }
 
+function editProjectSpecification() {
+  console.log("editProjectSpecification");
+  ipcRenderer.send("openEditProjectWindow");
+}
+
 function loadIdentity(data) {
+  document
+    .getElementById("project-edit-btn")
+    .addEventListener("click", editProjectSpecification);
   document.getElementById("project-cid").innerHTML = data.cid;
   document.getElementById("project-jid").innerHTML = data.jid;
   document.getElementById("project-redmine-jef").innerHTML =
