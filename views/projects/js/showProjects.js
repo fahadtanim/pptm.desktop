@@ -12,7 +12,7 @@ function loadData() {
 
 loadData();
 
-console.log("came");
+// console.log("came");
 
 function getProjectData(project_id) {
   var xhttp = new XMLHttpRequest();
@@ -27,7 +27,7 @@ function getProjectData(project_id) {
 }
 
 function loadProjectData(data) {
-  console.log(data);
+  // console.log(data);
   let path = window.location.href;
   // console.log(path);
   let pathArray = path.split("/");
@@ -49,15 +49,15 @@ function loadProjectData(data) {
   getEnrolledUser(data.project_id);
 }
 
-function editProjectSpecification() {
-  console.log("editProjectSpecification");
-  ipcRenderer.send("openEditProjectWindow");
+function editProjectSpecification(data) {
+  // console.log(data);
+  ipcRenderer.send("openEditProjectWindow", data);
 }
 
 function loadIdentity(data) {
-  document
-    .getElementById("project-edit-btn")
-    .addEventListener("click", editProjectSpecification);
+  document.getElementById("project-edit-btn").addEventListener("click", () => {
+    editProjectSpecification(data);
+  });
   document.getElementById("project-cid").innerHTML = data.cid;
   document.getElementById("project-jid").innerHTML = data.jid;
   document.getElementById("project-redmine-jef").innerHTML =
@@ -144,7 +144,7 @@ function loadDeadline(data) {
       : 0
   );
 
-  console.log(data.project_deadlines);
+  // console.log(data.project_deadlines);
   for (let i = 0; i < deadlines_length; i++) {
     // DEADLINE NAME PRINT
     let name_wrapper = document.createElement("div");
@@ -187,7 +187,7 @@ function getEnrolledUser(id) {
 }
 
 function loadEnrolledUser(data) {
-  console.log(data);
+  // console.log(data);
   let enrolledUserContainer = document.getElementById(
     "project-specification-enrolled-users-container"
   );

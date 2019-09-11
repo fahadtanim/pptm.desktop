@@ -5,7 +5,7 @@ const { ipcRenderer } = electron;
 /// #################  MAIN PROJECT WINDOW   #############################
 
 function loadDoc(currentPage) {
-  console.log(currentPage);
+  // console.log(currentPage);
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -27,7 +27,7 @@ function loadData(data, currentPage) {
     data.count % 10 == 0
       ? data.count / 10
       : (data.count + (10 - (data.count % 10))) / 10;
-  console.log(data);
+  // console.log(data);
 
   document.getElementById("data-input-field").innerHTML = "";
   document.getElementById("data-result").innerHTML = "";
@@ -101,14 +101,14 @@ function loadData(data, currentPage) {
 
 function showProject(id) {
   let path = window.location.href;
-  console.log(path);
+  // console.log(path);
   let pathArray = path.split("/");
   pathArray[pathArray.length - 1] =
     "showProjectViewWindow.html?project_id=" + id;
   path = pathArray.join("/");
   // console.log(path);
   window.location.href = path;
-  console.log(path);
+  // console.log(path);
 }
 
 //##########################################
@@ -123,8 +123,8 @@ document
 //##########################################
 
 function SearchClient(page, value) {
-  console.log(value);
-  console.log(page);
+  // console.log(value);
+  // console.log(page);
   if (page != "" && value != "") {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
@@ -150,7 +150,7 @@ function loadSerchData(data, currentPage) {
     data.count % 10 == 0
       ? data.count / 10
       : (data.count + (10 - (data.count % 10))) / 10;
-  console.log(test);
+  // console.log(test);
 
   document.getElementById("data-input-field").innerHTML = "";
   document.getElementById("data-result").innerHTML = "";
@@ -234,7 +234,7 @@ function loadSerchData(data, currentPage) {
 
 document.getElementById("client_page_btn").addEventListener("click", () => {
   const page = document.getElementById("go_to_page").value;
-  console.log(page);
+  // console.log(page);
   loadDoc(page);
 });
 
@@ -246,8 +246,8 @@ function addClientSearchBtn() {
     .addEventListener("click", () => {
       const page = document.getElementById("go_to_page").value;
       const value = document.getElementById("search-client-field").value;
-      console.log(page);
-      console.log(value);
+      // console.log(page);
+      // console.log(value);
       SearchClient(page, value);
     });
 }

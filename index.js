@@ -6,7 +6,7 @@ const { app, BrowserWindow, Menu } = electron;
 const ipcMain = electron.ipcMain;
 const dialog = electron.dialog;
 let mainWindow;
-let viewProjectsWindow;
+let editProjectsWindow;
 let addClientWindow;
 app.on("ready", () => {
   mainWindow = new BrowserWindow({
@@ -42,8 +42,33 @@ function createViewProjectsWindow() {
   );
 }
 
-ipcMain.on("openEditProjectWindow", event => {
-  dialog.showErrorBox("error msg", "an error msg");
+ipcMain.on("openEditProjectWindow", (event, args) => {
+  // console.log(args);
+  let data = args;
+  editProjectsWindow = new BrowserWindow({
+    modal: true,
+    parent: mainWindow,
+    width: 1300,
+    height: 768,
+    toggleDevTools: true,
+    webPreferences: {
+      nodeIntegration: true
+    }
+  });
+  editProjectsWindow.loadURL(
+    url.format({
+      pathname: path.join(__dirname, "/views/projects/editProjectsWindow.html"),
+      protocol: "file",
+      slashes: true
+    })
+  );
+  editProjectsWindow.webContents.on("did-finish-load", () => {
+    console.log("came here");
+    setTimeout(() => {
+      editProjectsWindow.webContents.send("projects:data", data);
+    }, 1500);
+  });
+  // ipcMain.send("project:data", args);
 });
 
 //ALL CLIENTS WINDOW
