@@ -8,15 +8,119 @@
     <link rel="stylesheet" href="./css/styles.css">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
-    <div id="test"></div>
+    <header class="row">
+        <h4 class="page-title container">Edit Project</h4>
+        <!-- <hr class="page-header-break col s12" /> -->
+    </header>
+    <div class="container">
+        <div class="row">
+            <h2 class="col s12 project-specification-category">Project Identity :</h2>
+            <div class="input-field col s4">
+                <input id="edit-project-cid" type="text">
+                <label for="edit-project-cid">CID</label>
+            </div>
+            <div class="input-field col s4">
+                <input id="edit-project-jid" type="text">
+                <label for="edit-project-jid">JID</label>
+            </div>
+            <div class="input-field col s4">
+                <input disabled value="cidjid" id="edit-project-name" type="text" class="validate">
+                <label for="edit-project-name">Project Name</label>
+            </div>
+            <div class="input-field col s4">
+                <input id="edit-project-redmine-jef" type="text">
+                <label for="edit-project-redmine-jef">Redmine Jef</label>
+            </div>
+            <div class="input-field col s4">
+                <input id="edit-project-live-date" type="date">
+                <label for="edit-project-live-date">Live Date</label>
+            </div>
+            <div class="input-field col s12">
+                <textarea id="edit-project-description" class="materialize-textarea"></textarea>
+                <label for="edit-project-description">Description</label>
+            </div>
+            <h2 class="col s12 project-specification-category">Project Feature :</h2>
+            <div class="input-field col s4">
+                <select id="edit-project-preprocessed">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+                <label>Preprocessed</label>
+            </div>
+            <div class="input-field col s4">
+                <select id="edit-project-input-data-file-pattern">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+                <label>Input Data File Pattern</label>
+            </div>
+            <div class="input-field col s4">
+                <select id="edit-project-working-data-file-pattern">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+                <label>Working Data File Pattern</label>
+            </div>
+            <div class="input-field col s4">
+                <select id="edit-project-checklist">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+                <label>Checklist</label>
+            </div>
+            <div class="input-field col s4">
+                <select id="edit-project-check-image">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+                <label>Checkimage</label>
+            </div>
+            <div class="input-field col s4">
+                <select id="edit-project-transaction">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+                <label>Transaction</label>
+            </div>
+            <div class="input-field col s4">
+                <select id="edit-project-message-manager">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+                <label>Message Manager</label>
+            </div>
+            <div class="input-field col s4">
+                <input id="edit-project-message-manager-text" type="number" min="0" max="99">
+                <label for="edit-project-message-manager-text">Message Manager Text</label>
+            </div>
+            <div class="input-field col s4">
+                <input id="edit-project-message-manager-image" type="number" min="0" max="99">
+                <label for="edit-project-message-manager-image">Message Manager Image</label>
+            </div>
+            <div class="input-field col s4">
+                <input id="edit-project-message-manager-total" type="number" min="0" max="199">
+                <label for="edit-project-message-manager-total">Message Manager Total</label>
+            </div>
+            <h2 class="col s12 project-specification-category">Project Deadlines :</h2>
+            <div class="col s12" id="edit-project-deadline-list-space"></div>
+        </div>
+    </div>
     <script src="./js/editProjects.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('select');
+            var instances = M.FormSelect.init(elems, {});
+        });
+    </script>
+
 </body>
 
 </html>
