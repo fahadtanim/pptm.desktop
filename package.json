@@ -9,6 +9,6 @@
   "author": "PrintProcess DSi",
   "license": "ISC",
   "dependencies": {
-    "electron": "^6.0.3"
+    "electron": "^18.3.7"
   }
 }
